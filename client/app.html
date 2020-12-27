@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Loan grant permission?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div>
+        <h1>please enter all the details carefully!!</h1>
+    </div>
+    <br>
+
+    <form class="form">
+        <h2>Submit Loan Ammount</h2>
+        <input type="text" name="LoanAmmount" id="uiLoanAmmount" class="area" class="floatLabel">
+    </form>
+
+    <form class="form">
+        <h2>Enter Loan ammount term</h2>
+        <input type="text" name="LoanAmmountTerm" id="uiLaterm" class="area" class="floatLabel">
+    </form>
+
+    <form class="form">
+        <h2>Enter Applicant's income</h2>
+        <input type="text" name="appincome" id="uiAppIncome" class="area" class="floatLabel">
+    </form>
+
+    <form class="form">
+        <h2>Enter Co-Applicant's income</h2>
+        <input type="text" name="coappincome" id="uiCoAppIncome" class="area" class="floatLabel">
+    </form>
+
+    <form class="form">
+        <h2>Has Applicant completed her/his graduation?</h2>
+        <h3>
+            <div class="switch_field">
+                <input type="radio" id="radio_yes" name="uiGraduationStatus" value="0"/>
+                <label for="radio_yes">No</label>
+                <input type="radio" name="uiGraduationStatus" id="radio_no" value="1"/>
+                <label for="radio_no">Yes</label>
+            </div>
+        </h3>
+    </form>
+
+    <form class="form">
+        <h2>Select Applicant's Gender below</h2>
+        <h3>
+            <div class="switch_field">
+                <input type="radio" name="uiGender" id="radio_female" value="0"/>
+                <label for="radio_female">Female</label>
+                <input type="radio" name="uiGender" id="radio_male" value="1"/>
+                <label for="radio_male">Male</label>
+            </div>
+        </h3>
+    </form>
+
+    <form class="form">
+        <h2>Is Appliacant Self-employed?</h2>
+        <h3>
+            <div class="switch_field">
+                <input type="radio" name="uiEmploy" id="radio_nonself_employed" value="0"/>
+                <label for="radio_nonself_employed">No</label>
+                <input type="radio" name="uiEmploy" id="radio_self_employed" value="1"/>
+                <label for="radio_self_employed">Yes</label>
+            </div>
+        </h3>
+    </form>
+
+    <form class="form">
+        <h2>Mention Credit History (1:has all debts paid/0:not paid)</h2>
+        <h3>
+            <div class="switch_field">
+                <input type="radio" name="uiCred" id="radio_credzero" >
+                <label for="radio_credzero">[0]</label>
+                <input type="radio" name="uiCred" id="radio_credone">
+                <label for="radio_credone">[1]</label>
+            </div>
+        </h3>
+    </form>
+
+    <form class="form">
+        <h2>Is the Applicant Married?</h2>
+        <h3>
+            <div class="switch_field">
+                <input type="radio" name="uiMarr" id="radio_marry">
+                <label for="radio_marry">No</label>
+                <input type="radio" name="uiMarr" id="radio_marrn">
+                <label for="radio_marrn">Yes</label>
+            </div>
+        </h3>
+    </form>
+
+    <form class="form">
+        <h2>Select number of dependents</h2>
+        <h3>
+            <div class="switch_field">
+                <input type="radio" name="uiDep" id="rad_dep0">
+                <label for="rad_dep0">[0]</label>
+                <input type="radio" name="uiDep" id="rad_dep1">
+                <label for="rad_dep1">[1]</label>
+                <input type="radio" name="uiDep" id="rad_dep2">
+                <label for="rad_dep2">[2]</label>
+                <input type="radio" name="uiDep" id="rad_dep3">
+                <label for="rad_dep3">[3/3+]</label>
+            </div>
+        </h3>
+    </form>
+
+    <form class="form">
+        <h2>Select property area </h2>
+        <h3>
+            <div class="switch_field">
+                <input type="radio" name="uiProp" id="rad_rur">
+                <label for="rad_rur">Rural</label>
+                <input type="radio" name="uiProp" id="rad_sem">
+                <label for="rad_sem">Semi-urban</label>
+                <input type="radio" name="uiProp" id="rad_urb">
+                <label for="rad_urb">Urban</label>
+            </div>
+        </h3>
+    </form>
+
+    <div>
+        <!-- <h3>
+            <button class="submit" onclick="onClick()" type="button">know your profile summary</button>
+        </h3>
+        
+        <div id="ed_status" class="result"></div> -->
+        
+        <!-- <div id="gend_status" class="result"></div> -->
+
+        <h3>
+            <button class="submit" onclick="getResult()" type="button">Get Result</button>
+        </h3>
+        <div id="uiResult" class="result"></div>
+<!-- 
+        <div id="amm_status" class="result"></div>  -->
+<!-- 
+        <div id="emp_status" class="result"></div> -->
+    </div>
+</body>
+</html>
